@@ -88,7 +88,7 @@ rm -f index.js
 # Generate .md
 {
     echo "# ${NEW_REPO_NAME}" 
-    echo "**${NEW_REPO_NAME}** is a typescript/assemblyScript enabled node package with debuggable unit tests written in typescript."
+    echo "**${NEW_REPO_NAME}** is a typescript/assemblyscript enabled node package with debuggable unit tests written in typescript."
 } > README.md
 # Generate .gitignore
 {
