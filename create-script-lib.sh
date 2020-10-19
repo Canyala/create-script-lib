@@ -222,9 +222,11 @@ curl -H "Authorization: token $GH_API_TOKEN" https://api.github.com/user/repos -
 git init
 # Add initial files and commit, push to remote.
 git add .
-# Commit first
+# Create main branch and do first commit.
 git commit -m "First commit."
 git branch -M main
 git remote add origin https://github.com/$GH_USER/${NEW_REPO_NAME}.git
 git push -u origin main
+# Do a build to get initial files in lib and build
+npm run build
 exit 0
