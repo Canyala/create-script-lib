@@ -2,9 +2,9 @@
 # GitHub API Token
 #GH_API_TOKEN is not defined here but in .bashrc
 # GitHub User Name
-GH_USER='Canyala'
+#GH_USER is not defined here but in .bashrc
 # Node Package Manmager org
-NPM_ORG='canyala'
+#NPM_ORG is not defined here but in .bashrc
 # Variable to store first argument to setup-repo, the repo name. Will be used as GH repo name, too.
 if [[ $# -eq 0 ]]; then
     NEW_REPO_NAME=$(basename "$PWD")
@@ -73,9 +73,17 @@ rm -f index.js
 {
     echo "export * from \"./lib\"";
 } > index.d.ts
-# Generate a test example for the api
+# Remove the js test example
+rm -f tests/index.js
+# Generate a js test example for the api
 {
-    #echo "import * as api from \"../src/the-first-one\""
+    echo 'const assert = require("assert");'
+    echo 'const api = require("..");'
+    echo 'assert.strictEqual(api.add(1, 2), 3);'
+    echo 'console.log("ok");'
+} > tests/index.js
+# Generate a jest test example for the api
+{
     echo "import * as api from \"..\""
     echo "test('add should work', () => {"
     echo "   expect(api.add(1,2)).toBe(3);"
@@ -193,7 +201,8 @@ jq '.author = "'"${GH_AUTHOR} <${GH_EMAIL}>"'"' package.json > .tmp && mv .tmp p
 jq '.description = "'"${PKG_DESCRIPTION}"'"' package.json > .tmp && mv .tmp package.json
 jq '.keywords = ["package","typescript","assemblyscript","'"${GH_AUTHOR}"'","'"${NEW_REPO_NAME}"'","'"${NPM_ORG}"'"]' package.json > .tmp && mv .tmp package.json 
 jq '.license = "MIT"' package.json > .tmp && mv .tmp package.json 
-jq '.scripts.test = "npm run build && jest --coverage"' package.json > .tmp && mv .tmp package.json
+jq '.scripts."test:jest" = "npm run build && jest --coverage"' package.json > .tmp && mv .tmp package.json
+jq '.scripts."test:assert" = "npm run build && node tests"' package.json > .tmp && mv .tmp package.json
 jq '.scripts."asbuild:untouched" = "asc assembly/index.ts --target debug -d > build/untouched.d.ts"' package.json > .tmp && mv .tmp package.json
 jq '.scripts."asbuild:optimized" = "asc assembly/index.ts --target release -d > build/optimized.d.ts"' package.json > .tmp && mv .tmp package.json
 jq '.scripts.tsbuild = "tsc"' package.json > .tmp && mv .tmp package.json
