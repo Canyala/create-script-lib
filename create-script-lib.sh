@@ -84,6 +84,10 @@ rm -f tests/index.js
 } > tests/index.js
 # Generate a jest test example for the api
 {
+    echo "/**"
+    echo "* @jest-environment node"
+    echo "*/"    
+    echo " "
     echo "import * as api from \"..\""
     echo "test('add should work', () => {"
     echo "   expect(api.add(1,2)).toBe(3);"
