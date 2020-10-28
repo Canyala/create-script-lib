@@ -226,15 +226,19 @@ jq '.files = ["/build","/lib"]' package.json > .tmp && mv .tmp package.json
 jq '.type = "commonjs"' package.json > .tmp && mv .tmp package.json
 jq '.main = "index.js"' package.json > .tmp && mv .tmp package.json
 # GitHub repos Create API call
+echo "Creating repo"
 curl -H "Authorization: token $GH_API_TOKEN" https://api.github.com/user/repos -d '{"name": "'"${NEW_REPO_NAME}"'", "description": "'"${PKG_DESCRIPTION}"'"}'
 # Initialize Git in project directory, and add the GH repo remote.
+echo "Initializing git"
 git init
 # Add initial files and commit, push to remote.
 git add .
 # Create main branch and do first commit.
 git commit -m "First commit."
 git branch -M main
+echo "remote add origin"
 git remote add origin https://github.com/$GH_USER/${NEW_REPO_NAME}.git
+echo "push"
 git push -u origin main
 # Do a build to get initial files in lib and build
 npm run build
