@@ -1,4 +1,12 @@
 #!/bin/bash
+# Ensure that jq is available
+dpkg -s jq &> /dev/null
+if [[ $? -gt 0 ]]; then
+    echo Error: jq is not available.
+    echo sudo apt-get jq
+    echo to install it.
+    exit 1
+fi
 # GitHub API Token
 #GH_API_TOKEN is not defined here but in .bashrc
 # GitHub User Name
