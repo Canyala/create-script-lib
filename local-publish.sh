@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 FILE=~/bin/create-script-lib
 if test -f "$FILE"; then
     chmod 0700 "$FILE"
