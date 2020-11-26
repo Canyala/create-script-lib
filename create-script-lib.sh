@@ -126,8 +126,8 @@ rm -f tests/index.js
 } > .npmignore
 # Generate jest.config.js, configurate to enable TypeScript tests.
 {
-    echo "export default {"
-    #echo "module.exports = {"
+    #echo "export default {"
+    echo "module.exports = {"
     echo "   roots: ['<rootDir>/src', '<rootDir>/tests'],"
     echo "   transform: {"
     echo "      '^.+\\\\.tsx?$': 'ts-jest',"
@@ -150,8 +150,8 @@ rm -f tests/index.js
     echo '{'
     echo '  "compilerOptions": {'
     echo '      "target": "es6",'
-    echo '      "module": "ESNext",'
-    #echo '      "module": "commonjs",'
+    #echo '      "module": "ESNext",'
+    echo '      "module": "commonjs",'
     echo '      "moduleResolution": "node",'
     echo '      "esModuleInterop": true,'
     echo '      "noImplicitAny": true,'
