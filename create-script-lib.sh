@@ -223,7 +223,8 @@ jq '.scripts.build = "npm run asbuild && npm run tsbuild"' package.json > .tmp &
 jq '.scripts.clean = "rm -rf coverage/* build/* lib/*"' package.json > .tmp && mv .tmp package.json
 jq '.scripts.start = "npm run build && node main.js"' package.json > .tmp && mv .tmp package.json
 jq '.files = ["/build","/lib"]' package.json > .tmp && mv .tmp package.json
-jq '.type = "commonjs"' package.json > .tmp && mv .tmp package.json
+jq '.type = "module"' package.json > .tmp && mv .tmp package.json
+#jq '.type = "commonjs"' package.json > .tmp && mv .tmp package.json
 jq '.main = "index.js"' package.json > .tmp && mv .tmp package.json
 # GitHub repos Create API call
 echo "Creating repo"
