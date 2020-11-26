@@ -126,7 +126,8 @@ rm -f tests/index.js
 } > .npmignore
 # Generate jest.config.js, configurate to enable TypeScript tests.
 {
-    echo "module.exports = {"
+    echo "export default {"
+    #echo "module.exports = {"
     echo "   roots: ['<rootDir>/src', '<rootDir>/tests'],"
     echo "   transform: {"
     echo "      '^.+\\\\.tsx?$': 'ts-jest',"
@@ -156,7 +157,7 @@ rm -f tests/index.js
     echo '      "removeComments": true,'
     echo '      "preserveConstEnums": true,'
     echo '      "lib": ["es2018","dom"],'
-    echo '      "sourceRoot": "src",'
+    echo '      "sourceRoot": "../src",'
     echo '      "strict": true,'
     echo '      "declaration": true,'
     echo '      "outDir": "lib",'
