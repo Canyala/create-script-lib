@@ -57,10 +57,10 @@ rm -f index.js
 # Generate an initial ts api wrapper file
 {
     echo 'import * as fs from "fs";'
-    echo 'import * as loader from "@assemblyscript/loader";' 
-    echo 'import ASModule from "../build/optimized";'
+    echo 'import * as loader from "@assemblyscript/loader/umd"; // /umd since jest likes it better...' 
+    echo 'import ASModule from "../build/untouched";'
     echo 'const imports = { /* imports go here */ };'
-    echo 'const wasmModulePath = __dirname.replace("/lib","/build/optimized.wasm");'
+    echo 'const wasmModulePath = __dirname.replace("/lib","/build/untouched.wasm");'
     echo 'const asModule = loader.instantiateSync<typeof ASModule>(fs.readFileSync(wasmModulePath), imports);'
     echo '// TypeScript API wrappers for AssemblyScript interop logic, also a good place to manage possible breaking changes etc.'
     echo 'const asm = asModule.exports;'
