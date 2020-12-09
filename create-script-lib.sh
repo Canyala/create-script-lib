@@ -3,7 +3,7 @@
 dpkg -s jq &> /dev/null
 if [[ $? -gt 0 ]]; then
     echo Error: jq is not available.
-    echo sudo apt-get jq
+    echo sudo apt install jq
     echo to install it.
     exit 1
 fi
