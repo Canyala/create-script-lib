@@ -42,7 +42,7 @@ Command 'nvm' not found, did you mean:
 Try: sudo apt install <deb name>
 ```
 
-Do **NOT** try the suggested `sudo apt install` above, instead, do the following:  
+Do **NOT** try the suggested `sudo apt install <deb name>` above; instead, do the following:  
 
 * Install nvm
 
@@ -52,9 +52,9 @@ curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 source ~/.profile
 ```
 
-### Local bin folder
+### Prepare a local bin folder
 
-The `local-publish.sh` and the `create-script-lib` scripts requires a `~/bin` folder to publish to. If you do not have such a folder you must create one.
+The `local-publish.sh` and the `create-script-lib` scripts requires a `~/bin` folder to publish to. If you do not have such a folder you need to create one.
 
 How to create a bin folder:
 
