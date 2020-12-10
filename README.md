@@ -1,20 +1,21 @@
-# 1. create-script-lib v0.0.1
+# create-script-lib v0.0.1<!-- omit in toc -->
 
-- [1. create-script-lib v0.0.1](#1-create-script-lib-v001)
-  - [1.1. Abstract](#11-abstract)
-  - [1.2. Included Files](#12-included-files)
-  - [1.3. Pre-requisites](#13-pre-requisites)
-    - [1.3.1. **N**ode **V**ersion **M**anager (NVM)](#131-node-version-manager-nvm)
-    - [1.3.2. Prepare a local bin folder](#132-prepare-a-local-bin-folder)
-    - [1.3.3. Github user-repo-access-token](#133-github-user-repo-access-token)
-    - [1.3.4. Environment variables](#134-environment-variables)
-    - [1.3.5. JSON Query (JQ)](#135-json-query-jq)
-  - [1.4. Install the source code](#14-install-the-source-code)
-    - [1.4.1. Create a local repo](#141-create-a-local-repo)
-    - [1.4.2. Make the tool available](#142-make-the-tool-available)
-  - [1.5. Using the scaffolding tool](#15-using-the-scaffolding-tool)
+## Table of contents<!-- omit in toc -->
 
-## 1.1. Abstract
+- [1. Abstract](#1-abstract)
+- [2. Included Files](#2-included-files)
+- [3. Pre-requisites](#3-pre-requisites)
+  - [3.1. **N**ode **V**ersion **M**anager (NVM)](#31-node-version-manager-nvm)
+  - [3.2. Prepare a local bin folder](#32-prepare-a-local-bin-folder)
+  - [3.3. Github user-repo-access-token](#33-github-user-repo-access-token)
+  - [3.4. Environment variables](#34-environment-variables)
+  - [3.5. JSON Query (JQ)](#35-json-query-jq)
+- [4. Install the source code](#4-install-the-source-code)
+  - [4.1. Create a local repo](#41-create-a-local-repo)
+  - [4.2. Make the tool available](#42-make-the-tool-available)
+- [5. Using the scaffolding tool](#5-using-the-scaffolding-tool)
+
+## 1. Abstract
 
 This is a scaffolding utility for JS/[TS](https://www.typescriptlang.org) lib [npm](https://www.npmjs.com/)-packages with an internal [AS](https://www.assemblyscript.org/) core, an exposed [TS](https://www.typescriptlang.org) api and [TS](https://www.typescriptlang.org) unit tests.  
 
@@ -25,7 +26,7 @@ Version | Description
  1.0.0 | *Under construction, not ready for use*
  0.0.1 | *Initial development version, do not use*
 
-## 1.2. Included Files
+## 2. Included Files
 
 File | Description  
 ---------|---------
@@ -35,11 +36,11 @@ File | Description
  `README.md` | *This `README.md` file*  
  `TEMPLATE.md` | *A `README.md` template for the scaffolded package*
 
-## 1.3. Pre-requisites
+## 3. Pre-requisites
 
 In order for `create-script-lib` to run, we need to prepare a few things before we can install the tool locally from source.  
 
-### 1.3.1. **N**ode **V**ersion **M**anager (NVM)
+### 3.1. **N**ode **V**ersion **M**anager (NVM)
 
 NVM is a popular tool that allows you to have multiple versions of node installed.
 You will be able to select a specific version to use as well as specifying a default version.
@@ -108,7 +109,7 @@ nvm alias default 14.15.1
 
 *At the time of writing, node@14.15.1 was the latest LTS available and it has been verified to work with the scaffolding tool. Using the **14.15.1** version and setting it as `default` is recommended.*
 
-### 1.3.2. Prepare a local bin folder
+### 3.2. Prepare a local bin folder
 
 The `local-publish.sh` and the `create-script-lib` scripts requires a `~/bin` folder to publish to. If you do not have such a folder you need to create one.
 
@@ -119,7 +120,7 @@ cd ~
 mkdir bin
 ```
 
-### 1.3.3. Github user-repo-access-token
+### 3.3. Github user-repo-access-token
 
 Besides creating a local git repo for the package, the tool also creates the remote repo using a git api call that requires an access token in order to validate. A step by step instruction follows:
 
@@ -137,7 +138,7 @@ Besides creating a local git repo for the package, the tool also creates the rem
 * Copy the generated token value in the green box to the clipboard.
 * Read the information in the blue box.
 
-### 1.3.4. Environment variables
+### 3.4. Environment variables
 
 A couple of variables are needed by the `create-script-lib` and the `local-publish.sh` scripts.
 
@@ -160,7 +161,7 @@ export NPM_ORG="your-organisation"
 account@computer:$ source ~/.bashrc
 ```
 
-### 1.3.5. JSON Query (JQ)
+### 3.5. JSON Query (JQ)
 
 `jq` is a tool that allows you to edit json files from the command line. `create-script-lib.sh' uses it to edit config files.
 
@@ -176,9 +177,9 @@ Install `jq` if needed like this:
 sudo apt install jq
 ```
 
-## 1.4. Install the source code
+## 4. Install the source code
 
-### 1.4.1. Create a local repo
+### 4.1. Create a local repo
 
 * Browse to <https://github.com/canyala/create-script-lib> or to a forked version of the repo.  
 
@@ -194,7 +195,7 @@ sudo apt install jq
 $git clone <paste_url_in_clipboard_here>
 ```
 
-### 1.4.2. Make the tool available
+### 4.2. Make the tool available
 
 * Make the local-publish.sh script executable.
 
@@ -211,7 +212,7 @@ $./local-publish.sh
 
 *The `local-publish.sh` script copies the `create-script-lib.sh` into the `~/bin` folder we created earlier and renames it to `create-script-lib` in the process while also making it executable.*
 
-## 1.5. Using the scaffolding tool
+## 5. Using the scaffolding tool
 
 The tool can be used in two ways:
 
