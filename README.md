@@ -19,9 +19,9 @@
 
 `create-script-lib` is a shell scaffolding utility for JS/[TS](https://www.typescriptlang.org) lib [npm](https://www.npmjs.com/)-packages with an internal [AS](https://www.assemblyscript.org/) core, an exposed [TS](https://www.typescriptlang.org) api and [TS](https://www.typescriptlang.org) unit tests.  
 
-TypeScript (TS) adds build time quality checks and AssemblyScript (AS)adds performance to the parts of a library that need it.
+TypeScript (TS) adds build time quality checks and AssemblyScript (AS) adds performance to the parts of a library that need it.
 
-The reasons for wrapping AS code with TS code is that it creates an encapsulation layer for code that use the library. Logic can be moved between the TS layer and the AS layer and vice versa if warranted,without affecting client code. Data structures like arrays, strings and complex objects require special handling since assemblyscript (actually [webassembly](https://webassembly.org/)) and typescript (actually javascript) uses memory differently. These differences can be mitigated in the TS layer and thus be hidden from client code. The ability to implement unit tests in typescript also improves the developer experience as well as the quality of a library.
+The reasons for wrapping AS code with TS code is that it creates an encapsulation layer for code that use the library. Logic can be moved between the TS layer and the AS layer and vice versa if warranted,without affecting client code. Data structures like arrays, strings and complex objects require special handling since assemblyscript (actually [webassembly](https://webassembly.org/)) and typescript (actually javascript) use memory differently. These differences can be mitigated in the TS layer and thus be hidden from client code. The ability to implement unit tests in typescript also improves the developer experience as well as the quality of a library.
 
 Version | Description
 ---------|----------
