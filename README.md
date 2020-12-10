@@ -103,7 +103,7 @@ nvm use node
 * Using a specific version and setting it as default version might look like this:
 
 ```lang-bash
-nvm use 14.15.0
+nvm use 14.15.1
 nvm alias default 14.15.1
 ```
 
