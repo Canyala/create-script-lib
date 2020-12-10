@@ -9,7 +9,7 @@
   - [3.2. Prepare a local bin folder](#32-prepare-a-local-bin-folder)
   - [3.3. Github user-repo-access-token](#33-github-user-repo-access-token)
   - [3.4. Environment variables](#34-environment-variables)
-  - [3.5. JSON Query (JQ)](#35-json-query-jq)
+  - [3.5. **J**SON **Q**uery (JQ)](#35-json-query-jq)
 - [4. Install the source code](#4-install-the-source-code)
   - [4.1. Create a local repo](#41-create-a-local-repo)
   - [4.2. Make the tool available](#42-make-the-tool-available)
@@ -161,7 +161,7 @@ export NPM_ORG="your-organisation"
 account@computer:$ source ~/.bashrc
 ```
 
-### 3.5. JSON Query (JQ)
+### 3.5. **J**SON **Q**uery (JQ)
 
 `jq` is a tool that allows you to edit json files from the command line. `create-script-lib.sh' uses it to edit config files.
 
