@@ -19,7 +19,9 @@
 
 `create-script-lib` is a shell scaffolding utility for JS/[TS](https://www.typescriptlang.org) lib [npm](https://www.npmjs.com/)-packages with an internal [AS](https://www.assemblyscript.org/) core, an exposed [TS](https://www.typescriptlang.org) api and [TS](https://www.typescriptlang.org) unit tests.  
 
-Follow the instructions in this document and you will be up and running in no time.
+TypeScript (TS) adds build time quality checks and AssemblyScript (AS)adds performance to the parts of a library that need it.
+
+The reasons for wrapping AS code with TS code is that it creates an encapsulation layer for code that use the library. Logic can be moved between the TS layer and the AS layer and vice versa if warranted,without affecting client code. Data structures like arrays, strings and complex objects require special handling since assemblyscript (actually [webassembly](https://webassembly.org/)) and typescript (actually javascript) uses memory differently. These differences can be mitigated in the TS layer and thus be hidden from client code. The ability to implement unit tests in typescript also improves the developer experience as well as the quality of a library.
 
 Version | Description
 ---------|----------
@@ -124,14 +126,14 @@ mkdir bin
 
 Besides creating a local git repo for the package, the tool also creates the remote repo using a git api call that requires an access token in order to validate. A step by step instruction follows:
 
-* Use a browser and go to your personal git account page
+* Use a browser and go to your personal git account page.
 * You need to login in order to continue, do that if needed.
 * Click your happy face or your cool symbol in the top right corner.
 * An account menu pops up. Click `Settings`
 * To the left you find a button `Developer settings`. Click at it.
 * The `Developer settings` page opens. Click `Personal access tokens`
-* To the right we find a button `Generate new token`, Click it.
-* When asked for you password, provide it.
+* To the right we find a button `Generate new token`, click it.
+* When asked for your password, provide it.
 * In the `Note` box enter a name/description e.g `repo-access-token`
 * Click the `repo` checkbox
 * Scroll down and click the `Generate token` button.
@@ -192,7 +194,7 @@ sudo apt install jq
 * Clone the repo using git
 
 ```lang-bash
-$git clone <paste_url_in_clipboard_here>
+$git clone <paste_url_from_clipboard_here>
 ```
 
 ### 4.2. Make the tool available
@@ -219,10 +221,10 @@ The tool can be used in two ways:
 * In a parent folder
 
 ```lang-bash
-$create-script-lib <a-nice-name-for-the-library>
+$create-script-lib a-nice-name-for-the-library
 ```
 
-The tool creates a sub folder using `<a-nice-name-for-the-library>`. If such a folder already exist the tool fails gracefully and no library is created.
+The tool creates a sub folder using `a-nice-name-for-the-library`. If such a folder already exist the tool fails gracefully and no library is created.
 
 * In an empty folder
 
