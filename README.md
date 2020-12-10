@@ -185,7 +185,7 @@ sudo apt install jq
 
 * Click the green `Code` button.
 
-* Click the URL copy button.
+* Click the copy url button.
 
 * Use a terminal to go to your parent repo folder.
 
@@ -231,4 +231,4 @@ $mkdir a-nicely-named-lib && cd a-nicely-named-lib
 $create-script-lib
 ```
 
-The tool use the folder name when writing configuration info etc and also it checks that the folder is empty. If not empty, the tool fail gracefully without changing anything.  
+The tool use the folder name when writing configuration info etc and it also checks if the folder is empty. If not empty, the tool fails gracefully without changing or touching anything.  
