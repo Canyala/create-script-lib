@@ -1,4 +1,4 @@
-# create-script-lib v0.0.1<!-- omit in toc -->
+# create-script-lib V 0.0.1<!-- omit in toc -->
 
 ## Table of contents<!-- omit in toc -->
 
