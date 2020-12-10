@@ -1,6 +1,6 @@
 # create-script-lib v0.0.1
 
-This is a scaffolding utility for JS/TS lib packages with an internal AS core, an exposed TS api and TS unit tests.  
+This is a scaffolding utility for JS/[TS](https://www.typescriptlang.org) lib [npm](https://www.npmjs.com/)-packages with an internal [AS](https://www.assemblyscript.org/) core, an exposed [TS](https://www.typescriptlang.org) api and [TS](https://www.typescriptlang.org) unit tests.  
 
 Follow the instructions in this document and you will be up and running in no time.
 
@@ -87,10 +87,10 @@ nvm use node
 
 ```lang-bash
 nvm use 14.15.0
-nvm alias default 14.15.0
+nvm alias default 14.15.1
 ```
 
-*At the time of writing, node@14.15.0 was the latest LTS available and it has been verified to work with the scaffolding tool.*
+*At the time of writing, node@14.15.1 was the latest LTS available and it has been verified to work with the scaffolding tool. Using the **14.15.1** version and setting it as `default` is recommended.*
 
 ### Prepare a local bin folder
 
@@ -105,7 +105,7 @@ mkdir bin
 
 ### Github user-repo-access-token
 
-Besides creating a local git repo for the package, the package scaffolding tool also creates the remote repo using a git api call that requires an access token in order to validate. A step by step instruction follows below.
+Besides creating a local git repo for the package, the tool also creates the remote repo using a git api call that requires an access token in order to validate. A step by step instruction follows:
 
 * Use a browser and go to your personal git account page
 * You need to login in order to continue, do that if needed.
@@ -146,7 +146,7 @@ account@computer:$ source ~/.bashrc
 
 ### JSON Query (JQ)
 
-`jq` is a tool that allows you to edit json files from the command line. `create-script-lib.sh' use it to edit congig files.
+`jq` is a tool that allows you to edit json files from the command line. `create-script-lib.sh' uses it to edit config files.
 
 Test for `jq` like this:
 
@@ -159,3 +159,59 @@ Install `jq` if needed like this:
 ```lang-bash
 sudo apt install jq
 ```
+
+## Install the source code
+
+### Create a local repo
+
+* Browse to <https://github.com/canyala/create-script-lib> or to a forked version of the repo.  
+
+* Click the green `Code` button.
+
+* Click the URL copy button.
+
+* Use a terminal to go to your parent repo folder.
+
+* Clone the repo using git
+
+```lang-bash
+$git clone <paste_url_in_clipboard_here>
+```
+
+### Make the tool available
+
+* Make the local-publish.sh script executable.
+
+```lang-bash
+$cd create-script-lib 
+$chmod +x local-publish.sh
+```
+
+* Publish the scaffolding tool script
+
+```lang-bash
+$./local-publish.sh
+```
+
+*The `local-publish.sh` script copies the `create-script-lib.sh` into the `~/bin` folder we created earlier and renames it to `create-script-lib` in the process while also making it executable.*
+
+## Using the scaffolding tool
+
+The tool can be used in two ways:
+
+* In a parent folder
+
+```lang-bash
+$create-script-lib <a-nice-name-for-the-library>
+```
+
+The tool creates a sub folder using `<a-nice-name-for-the-library>`. If such a folder already exist the tool fails gracefully and no library is created.
+
+* In an empty folder
+
+```lang-bash
+$mkdir a-nicely-named-lib && cd a-nicely-named-lib
+$create-script-lib
+```
+
+The tool use the folder name when writing configuration info etc and also it checks that the folder is empty. If not empty, the tool fail gracefully without changing anything.  
