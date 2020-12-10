@@ -1,4 +1,6 @@
-# create-script-lib v0.0.1
+<!-- TOC -->autoauto- [1. create-script-lib v0.0.1](#1-create-script-lib-v001)auto    - [1.1. Included Files](#11-included-files)auto    - [1.2. Pre-requisites](#12-pre-requisites)auto        - [1.2.1. **N**ode **V**ersion **M**anager (NVM)](#121-node-version-manager-nvm)auto        - [1.2.2. Prepare a local bin folder](#122-prepare-a-local-bin-folder)auto        - [1.2.3. Github user-repo-access-token](#123-github-user-repo-access-token)auto        - [1.2.4. Environment variables](#124-environment-variables)auto        - [1.2.5. JSON Query (JQ)](#125-json-query-jq)auto    - [1.3. Install the source code](#13-install-the-source-code)auto        - [1.3.1. Create a local repo](#131-create-a-local-repo)auto        - [1.3.2. Make the tool available](#132-make-the-tool-available)auto    - [1.4. Using the scaffolding tool](#14-using-the-scaffolding-tool)autoauto<!-- /TOC -->
+
+# 1. create-script-lib v0.0.1
 
 This is a scaffolding utility for JS/[TS](https://www.typescriptlang.org) lib [npm](https://www.npmjs.com/)-packages with an internal [AS](https://www.assemblyscript.org/) core, an exposed [TS](https://www.typescriptlang.org) api and [TS](https://www.typescriptlang.org) unit tests.  
 
@@ -9,7 +11,7 @@ Version | Description
  1.0.0 | *Under construction, not ready for use*
  0.0.1 | *Initial development version, do not use*
 
-## Included Files
+## 1.1. Included Files
 
 File | Description  
 ---------|---------
@@ -19,11 +21,11 @@ File | Description
  `README.md` | *This `README.md` file*  
  `TEMPLATE.md` | *A `README.md` template for the scaffolded package*
 
-## Pre-requisites
+## 1.2. Pre-requisites
 
 In order for `create-script-lib` to run, we need to prepare a few things before we can install the tool locally from source.  
 
-### **N**ode **V**ersion **M**anager (NVM)
+### 1.2.1. **N**ode **V**ersion **M**anager (NVM)
 
 NVM is a popular tool that allows you to have multiple versions of node installed.
 You will be able to select a specific version to use as well as specifying a default version.
@@ -92,7 +94,7 @@ nvm alias default 14.15.1
 
 *At the time of writing, node@14.15.1 was the latest LTS available and it has been verified to work with the scaffolding tool. Using the **14.15.1** version and setting it as `default` is recommended.*
 
-### Prepare a local bin folder
+### 1.2.2. Prepare a local bin folder
 
 The `local-publish.sh` and the `create-script-lib` scripts requires a `~/bin` folder to publish to. If you do not have such a folder you need to create one.
 
@@ -103,7 +105,7 @@ cd ~
 mkdir bin
 ```
 
-### Github user-repo-access-token
+### 1.2.3. Github user-repo-access-token
 
 Besides creating a local git repo for the package, the tool also creates the remote repo using a git api call that requires an access token in order to validate. A step by step instruction follows:
 
@@ -121,7 +123,7 @@ Besides creating a local git repo for the package, the tool also creates the rem
 * Copy the generated token value in the green box to the clipboard.
 * Read the information in the blue box.
 
-### Environment variables
+### 1.2.4. Environment variables
 
 A couple of variables are needed by the `create-script-lib` and the `local-publish.sh` scripts.
 
@@ -144,7 +146,7 @@ export NPM_ORG="your-organisation"
 account@computer:$ source ~/.bashrc
 ```
 
-### JSON Query (JQ)
+### 1.2.5. JSON Query (JQ)
 
 `jq` is a tool that allows you to edit json files from the command line. `create-script-lib.sh' uses it to edit config files.
 
@@ -160,9 +162,9 @@ Install `jq` if needed like this:
 sudo apt install jq
 ```
 
-## Install the source code
+## 1.3. Install the source code
 
-### Create a local repo
+### 1.3.1. Create a local repo
 
 * Browse to <https://github.com/canyala/create-script-lib> or to a forked version of the repo.  
 
@@ -178,7 +180,7 @@ sudo apt install jq
 $git clone <paste_url_in_clipboard_here>
 ```
 
-### Make the tool available
+### 1.3.2. Make the tool available
 
 * Make the local-publish.sh script executable.
 
@@ -195,7 +197,7 @@ $./local-publish.sh
 
 *The `local-publish.sh` script copies the `create-script-lib.sh` into the `~/bin` folder we created earlier and renames it to `create-script-lib` in the process while also making it executable.*
 
-## Using the scaffolding tool
+## 1.4. Using the scaffolding tool
 
 The tool can be used in two ways:
 
