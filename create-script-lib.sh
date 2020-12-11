@@ -105,7 +105,7 @@ rm -f tests/index.js
 {
     echo "console.log('Hello, world from ${NEW_REPO_NAME}');"
 } > main.js
-# Generate .md
+# Generate .md TODO: Modify to use TEMPLATE.md => README.md
 {
     echo "# ${NEW_REPO_NAME}" 
     echo "**${NEW_REPO_NAME}** is a typescript/assemblyscript enabled node package with debuggable unit tests written in typescript."
