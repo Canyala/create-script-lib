@@ -3,6 +3,8 @@
 ## Table of contents<!-- omit in toc -->
 
 - [1. Abstract](#1-abstract)
+  - [1.1. Commentary](#11-commentary)
+  - [1.2. Releases](#12-releases)
 - [2. Included Files](#2-included-files)
 - [3. Pre-requisites](#3-pre-requisites)
   - [3.1. **N**ode **V**ersion **M**anager (NVM)](#31-node-version-manager-nvm)
@@ -21,7 +23,17 @@
 
 TypeScript (TS) adds build time quality checks and AssemblyScript (AS) adds performance to the parts of a library that need it.
 
-The reasons for wrapping AS code with TS code is that it creates an encapsulation layer for code that use the library. Logic can be moved between the TS layer and the AS layer and vice versa if warranted, without affecting client code. Data structures like arrays, strings and complex objects require special handling since assemblyscript (actually [webassembly](https://webassembly.org/)) and typescript (actually javascript) use memory differently. These differences can be mitigated in the TS layer and thus be hidden from client code. The ability to implement unit tests in typescript also improves the developer experience as well as the quality of a library.
+### 1.1. Commentary
+
+*The reasons for wrapping AS code with TS code is that it creates an encapsulation layer for code that use the library. Logic can be moved between the TS layer and the AS layer and vice versa if warranted, without affecting client code.*
+
+*Data structures like arrays, strings and complex objects require special handling since assemblyscript (actually [webassembly](https://webassembly.org/)) and typescript (actually javascript) use memory differently.*
+
+*These differences can be mitigated in the TS layer and thus be hidden from client code. The ability to implement unit tests in typescript also improves the developer experience as well as the quality of a library.*
+
+GITHUB references to TypeScript and AssemblyScript here...
+
+### 1.2. Releases
 
 Version | Description
 ---------|----------
@@ -49,7 +61,7 @@ You will be able to select a specific version to use as well as specifying a def
 
 You can read about `nvm` [here](https://github.com/nvm-sh/nvm/blob/master/README.md) if you want to learn more.  
 
-* Test if `nvm` is installed
+- Test if `nvm` is installed
 
 ```lang-bash
 account@computer:$ nvm --version
@@ -67,7 +79,7 @@ Try: sudo apt install <deb name>
 
 Do **NOT** try the suggested `sudo apt install <deb name>` above; instead, do the following:  
 
-* Install nvm
+- Install nvm
 
 ```lang-bash
 sudo apt install curl 
@@ -76,33 +88,33 @@ source ~/.profile
 nvm --version
 ```
 
-* Install the latest versions of node
+- Install the latest versions of node
 
 ```lang-bash
 nvm install node
 nvm install --lts
 ```
 
-* You can `ls` list which versions of node are installed locally and which are available remotely like this:
+- You can `ls` list which versions of node are installed locally and which are available remotely like this:
 
 ```lang-bash
 nvm ls
 nvm ls-remote
 ```
 
-* Use the stable LTS version like this:
+- Use the stable LTS version like this:
 
 ```lang-bash
 nvm use --lts
 ```
 
-* If you want to try out the latest version do this:
+- If you want to try out the latest version do this:
 
 ```lang-bash
 nvm use node
 ```
 
-* Using a specific version and setting it as default version might look like this:
+- Using a specific version and setting it as default version might look like this:
 
 ```lang-bash
 nvm use 14.15.1
@@ -115,7 +127,7 @@ nvm alias default 14.15.1
 
 The `local-publish.sh` and the `create-script-lib` scripts requires a `~/bin` folder to publish to. If you do not have such a folder you need to create one.
 
-* How to create a bin folder:
+- How to create a bin folder:
 
 ```lang-bash
 cd ~
@@ -126,27 +138,27 @@ mkdir bin
 
 Besides creating a local git repo for the package, the tool also creates the remote repo using a git api call that requires an access token in order to validate. A step by step instruction follows:
 
-* Use a browser and go to your personal git account page.
-* You need to login in order to continue, do that if needed.
-* Click your happy face or your cool symbol in the top right corner.
-* An account menu pops up. Click `Settings`
-* To the left you find a button `Developer settings`. Click at it.
-* The `Developer settings` page opens. Click `Personal access tokens`
-* To the right we find a button `Generate new token`, click it.
-* When asked for your password, provide it.
-* In the `Note` box enter a name/description e.g `repo-access-token`
-* Click the `repo` checkbox
-* Scroll down and click the `Generate token` button.
-* Copy the generated token value in the green box to the clipboard.
-* Read the information in the blue box.
+- Use a browser and go to your personal git account page.
+- You need to login in order to continue, do that if needed.
+- Click your happy face or your cool symbol in the top right corner.
+- An account menu pops up. Click `Settings`
+- To the left you find a button `Developer settings`. Click at it.
+- The `Developer settings` page opens. Click `Personal access tokens`
+- To the right we find a button `Generate new token`, click it.
+- When asked for your password, provide it.
+- In the `Note` box enter a name/description e.g `repo-access-token`
+- Click the `repo` checkbox
+- Scroll down and click the `Generate token` button.
+- Copy the generated token value in the green box to the clipboard.
+- Read the information in the blue box.
 
 ### 3.4. Environment variables
 
 A couple of variables are needed by the `create-script-lib` and the `local-publish.sh` scripts.
 
-* Open the `~/.bashrc` file using your favorite editor.
-* Paste the access token value in the clipboard at the end so you do not lose it. You will move it to it´s proper location further down.
-* Add the following to the end of the `~/.bashrc` file.
+- Open the `~/.bashrc` file using your favorite editor.
+- Paste the access token value in the clipboard at the end so you do not lose it. You will move it to it´s proper location further down.
+- Add the following to the end of the `~/.bashrc` file.
 
 ```lang-bash
 export PATH="$PATH:~/bin"
@@ -155,9 +167,9 @@ export GH_USER="your-github-user-name"
 export NPM_ORG="your-organisation"
 ```
 
-* Substitute `"github-user-repo-accesstoken"`, `"your-github-user-name"` and `"your-organisation"` with alternatives suitable for you. Move the previously pasted `github-user-repo-access-token` value to it´s proper position.
+- Substitute `"github-user-repo-accesstoken"`, `"your-github-user-name"` and `"your-organisation"` with alternatives suitable for you. Move the previously pasted `github-user-repo-access-token` value to it´s proper position.
 
-* Apply the changes immidiately
+- Apply the changes immidiately
 
 ```lang-bash
 account@computer:$ source ~/.bashrc
@@ -165,7 +177,7 @@ account@computer:$ source ~/.bashrc
 
 ### 3.5. **J**SON **Q**uery (JQ)
 
-`jq` is a tool that allows you to edit json files from the command line. `create-script-lib.sh' uses it to edit config files.
+`jq` is a tool that allows you to edit json files from the command line. `create-script-lib.sh' uses it to edit config files. You can read about jq [here](http://manpages.ubuntu.com/manpages/focal/man1/jq.1.html).
 
 Test for `jq` like this:
 
@@ -183,15 +195,15 @@ sudo apt install jq
 
 ### 4.1. Create a local repo
 
-* Browse to <https://github.com/canyala/create-script-lib> or to a forked version of the repo.  
+- Browse to <https://github.com/canyala/create-script-lib> or to a forked version of the repo.  
 
-* Click the green `Code` button.
+- Click the green `Code` button.
 
-* Click the copy url button.
+- Click the copy url button.
 
-* Use a terminal to go to your parent repo folder.
+- Use a terminal to go to your parent repo folder.
 
-* Clone the repo using git
+- Clone the repo using git
 
 ```lang-bash
 $git clone <paste_url_from_clipboard_here>
@@ -199,14 +211,14 @@ $git clone <paste_url_from_clipboard_here>
 
 ### 4.2. Make the tool available
 
-* Make the local-publish.sh script executable.
+- Make the local-publish.sh script executable.
 
 ```lang-bash
 $cd create-script-lib 
 $chmod +x local-publish.sh
 ```
 
-* Publish the scaffolding tool script
+- Publish the scaffolding tool script
 
 ```lang-bash
 $./local-publish.sh
@@ -218,7 +230,7 @@ $./local-publish.sh
 
 The tool can be used in two ways:
 
-* In a parent folder
+- In a parent folder
 
 ```lang-bash
 $create-script-lib a-nice-name-for-the-library
@@ -226,7 +238,7 @@ $create-script-lib a-nice-name-for-the-library
 
 The tool creates a sub folder using `a-nice-name-for-the-library`. If such a folder already exist the tool fails gracefully and no library is created.
 
-* In an empty folder
+- In an empty folder
 
 ```lang-bash
 $mkdir a-nicely-named-lib && cd a-nicely-named-lib
