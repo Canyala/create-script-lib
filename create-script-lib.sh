@@ -233,11 +233,11 @@ jq '.main = "index.js"' package.json > .tmp && mv .tmp package.json
 # Fetch a copy of the package template and create a README.md 
 cp ~/bin/create-script-lib.template.md ./README.md
 # Replace the macro strings in ./README.md
-sed -i "s/\\\${PKG_README_DESCRIPTON}/$PKG_README_DESCRIPTON" ./README.md
-sed -i "s/\\\${GH_USER}/$GH_USER" ./README.md
-sed -i "s/\\\${GH_AUTHOR}/$GH_AUTHOR" ./README.md
-sed -i "s/\\\${GH_EMAIL}/$GH_EMAIL" ./README.md
-sed -i "s/\\\${NPM_ORG}/$NPM_ORG" ./README.md
+sed -i "s/\\\${PKG_README_DESCRIPTON}/$PKG_README_DESCRIPTON/" ./README.md
+sed -i "s/\\\${GH_USER}/$GH_USER/" ./README.md
+sed -i "s/\\\${GH_AUTHOR}/$GH_AUTHOR/" ./README.md
+sed -i "s/\\\${GH_EMAIL}/$GH_EMAIL/" ./README.md
+sed -i "s/\\\${NPM_ORG}/$NPM_ORG/" ./README.md
 # GitHub repos Create API call
 echo "Creating repo"
 curl -H "Authorization: token $GH_API_TOKEN" https://api.github.com/user/repos -d '{"name": "'"${NEW_REPO_NAME}"'", "description": "'"${PKG_DESCRIPTION}"'"}'
