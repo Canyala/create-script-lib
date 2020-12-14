@@ -1,3 +1,8 @@
-# @PACKAGE_NAME@
+# \${NPM_ORG}@\${NEW_REPO_NAME}@0.0.0.1
 
-Text to be improved upon.
+\${PKG_README_DESCRIPTON}
+
+\${GH_USER}  
+\${GH_AUTHOR}  
+\${GH_EMAIL}  
+\${NPM_ORG}  
