@@ -232,8 +232,9 @@ jq '.type = "commonjs"' package.json > .tmp && mv .tmp package.json
 jq '.main = "index.js"' package.json > .tmp && mv .tmp package.json
 # Fetch a copy of the package template and create a README.md 
 cp ~/bin/create-script-lib.template.md ./README.md
-# Replace the macro strings in ./README.md
+# Replace the macro strings in ./README.md. Twice because sed only replace one occurance / line ?
 NEW_REPO_NAME_MACRO='\\${NEW_REPO_NAME}'
+sed -i "s/${NEW_REPO_NAME_MACRO}/${NEW_REPO_NAME}/" ./README.md
 sed -i "s/${NEW_REPO_NAME_MACRO}/${NEW_REPO_NAME}/" ./README.md
 PKG_README_DESCRIPTION_MACRO='\\${PKG_README_DESCRIPTION}'
 sed -i "s/${PKG_README_DESCRIPTION_MACRO}/${PKG_README_DESCRIPTION}/" ./README.md

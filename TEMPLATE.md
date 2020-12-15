@@ -21,12 +21,12 @@ Org: \${NPM_ORG}
   - [3.7. \${NEW_REPO_NAME}/lib](#37-new_repo_namelib)
   - [3.8. \${NEW_REPO_NAME}/lib/index.d.ts](#38-new_repo_namelibindexdts)
   - [3.9. \${NEW_REPO_NAME}/lib/index.js](#39-new_repo_namelibindexjs)
-  - [3.10. \${NEW_REPO_NAME}/lib/\\${NEW_REPO_NAME}.d.ts](#310-new_repo_namelibnew_repo_namedts)
-  - [3.11. \${NEW_REPO_NAME}/lib/\\${NEW_REPO_NAME}.js](#311-new_repo_namelibnew_repo_namejs)
+  - [3.10. \${NEW_REPO_NAME}/lib/\${NEW_REPO_NAME}.d.ts](#310-new_repo_namelibnew_repo_namedts)
+  - [3.11. \${NEW_REPO_NAME}/lib/\${NEW_REPO_NAME}.js](#311-new_repo_namelibnew_repo_namejs)
   - [3.12. \${NEW_REPO_NAME}/src/index.ts](#312-new_repo_namesrcindexts)
-  - [3.13. \${NEW_REPO_NAME}/src/\\${NEW_REPO_NAME}.ts](#313-new_repo_namesrcnew_repo_namets)
+  - [3.13. \${NEW_REPO_NAME}/src/\${NEW_REPO_NAME}.ts](#313-new_repo_namesrcnew_repo_namets)
   - [3.14. \${NEW_REPO_NAME}/tests/index.js](#314-new_repo_nametestsindexjs)
-  - [3.15. \${NEW_REPO_NAME}/tests/\\${NEW_REPO_NAME}.spec.ts](#315-new_repo_nametestsnew_repo_namespects)
+  - [3.15. \${NEW_REPO_NAME}/tests/\${NEW_REPO_NAME}.spec.ts](#315-new_repo_nametestsnew_repo_namespects)
 - [4. Launch configurations](#4-launch-configurations)
 - [5. NPM Scripts](#5-npm-scripts)
 
@@ -117,11 +117,11 @@ Generated type definition for the js index module.
 
 Generated JavaScript index module.
 
-### 3.10. \${NEW_REPO_NAME}/lib/\\${NEW_REPO_NAME}.d.ts  
+### 3.10. \${NEW_REPO_NAME}/lib/\${NEW_REPO_NAME}.d.ts  
 
 Generated Type definition for js api module.
 
-### 3.11. \${NEW_REPO_NAME}/lib/\\${NEW_REPO_NAME}.js  
+### 3.11. \${NEW_REPO_NAME}/lib/\${NEW_REPO_NAME}.js  
 
 Generated JavaScript api implementation module.
 
@@ -129,7 +129,7 @@ Generated JavaScript api implementation module.
 
 TypeScript api index module.
 
-### 3.13. \${NEW_REPO_NAME}/src/\\${NEW_REPO_NAME}.ts  
+### 3.13. \${NEW_REPO_NAME}/src/\${NEW_REPO_NAME}.ts  
 
 TypeScript api implementation module.
 
@@ -137,7 +137,7 @@ TypeScript api implementation module.
 
 Barebones JavaScript api module tests.
 
-### 3.15. \${NEW_REPO_NAME}/tests/\\${NEW_REPO_NAME}.spec.ts  
+### 3.15. \${NEW_REPO_NAME}/tests/\${NEW_REPO_NAME}.spec.ts  
 
 Jest TypeScript api module tests.
 
