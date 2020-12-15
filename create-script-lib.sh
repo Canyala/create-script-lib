@@ -212,7 +212,6 @@ GH_AUTHOR=$(git config user.name)
 GH_EMAIL=$(git config user.email)
 PKG_GIT_DESCRIPTION="${NEW_REPO_NAME} is a typescript/assemblyscript enabled node package with debuggable unittests in typescript."
 PKG_README_DESCRIPTION="\\*\\*${NEW_REPO_NAME}\\*\\* is a typescript\\/assemblyscript enabled node package with debuggable unittests in typescript\\."
-#echo "\$PKG_README_DESCRIPTION=$PKG_README_DESCRIPTION"
 jq '.version = "0.0.1"' package.json > .tmp && mv .tmp package.json 
 jq '.author = "'"${GH_AUTHOR} <${GH_EMAIL}>"'"' package.json > .tmp && mv .tmp package.json 
 jq '.description = "'"${PKG_GIT_DESCRIPTION}"'"' package.json > .tmp && mv .tmp package.json
@@ -238,7 +237,6 @@ NEW_REPO_NAME_MACRO='\\${NEW_REPO_NAME}'
 sed -i "s/${NEW_REPO_NAME_MACRO}/${NEW_REPO_NAME}/" ./README.md
 PKG_README_DESCRIPTION_MACRO='\\${PKG_README_DESCRIPTION}'
 sed -i "s/${PKG_README_DESCRIPTION_MACRO}/${PKG_README_DESCRIPTION}/" ./README.md
-#sed -i "s/${PKG_README_DESCRIPTION_MACRO}/This works ${PKG_DESCRIPTION}/" ./README.md
 GH_USER_MACRO='\\${GH_USER}'
 sed -i "s/${GH_USER_MACRO}/${GH_USER}/" ./README.md
 GH_AUTHOR_MACRO='\\${GH_AUTHOR}'
