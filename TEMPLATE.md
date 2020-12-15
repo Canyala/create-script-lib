@@ -11,22 +11,22 @@ Org: \${NPM_ORG}
 
 - [1. Abstract](#1-abstract)
 - [2. Releases](#2-releases)
-- [3. Files and folders](#3-files-and-folders)
-  - [\${NEW_REPO_NAME}/assembly/index.ts](#new_repo_nameassemblyindexts)
-  - [\${NEW_REPO_NAME}/build/optimized.d.ts](#new_repo_namebuildoptimizeddts)
-  - [\${NEW_REPO_NAME}/build/optimized.wasm](#new_repo_namebuildoptimizedwasm)
-  - [\${NEW_REPO_NAME}/build/optimized.wat](#new_repo_namebuildoptimizedwat)
-  - [\${NEW_REPO_NAME}/index.d.ts](#new_repo_nameindexdts)
-  - [\${NEW_REPO_NAME}/index.js](#new_repo_nameindexjs)
-  - [\${NEW_REPO_NAME}/lib](#new_repo_namelib)
-  - [\${NEW_REPO_NAME}/lib/index.d.ts](#new_repo_namelibindexdts)
-  - [\${NEW_REPO_NAME}/lib/index.js](#new_repo_namelibindexjs)
-  - [\${NEW_REPO_NAME}/lib/\${NEW_REPO_NAME}.d.ts](#new_repo_namelibnew_repo_namedts)
-  - [\${NEW_REPO_NAME}/lib/\${NEW_REPO_NAME}.js](#new_repo_namelibnew_repo_namejs)
-  - [\${NEW_REPO_NAME}/src/index.ts](#new_repo_namesrcindexts)
-  - [\${NEW_REPO_NAME}/src/\${NEW_REPO_NAME}.ts](#new_repo_namesrcnew_repo_namets)
-  - [\${NEW_REPO_NAME}/tests/index.js](#new_repo_nametestsindexjs)
-  - [\${NEW_REPO_NAME}/tests/\${NEW_REPO_NAME}.spec.ts](#new_repo_nametestsnew_repo_namespects)
+- [3. The folders and files of \${NEW_REPO_NAME}](#3-the-folders-and-files-of-new_repo_name)
+  - [3.1. \${NEW_REPO_NAME}/assembly/index.ts](#31-new_repo_nameassemblyindexts)
+  - [3.2. \${NEW_REPO_NAME}/build/optimized.d.ts](#32-new_repo_namebuildoptimizeddts)
+  - [3.3. \${NEW_REPO_NAME}/build/optimized.wasm](#33-new_repo_namebuildoptimizedwasm)
+  - [3.4. \${NEW_REPO_NAME}/build/optimized.wat](#34-new_repo_namebuildoptimizedwat)
+  - [3.5. \${NEW_REPO_NAME}/index.d.ts](#35-new_repo_nameindexdts)
+  - [3.6. \${NEW_REPO_NAME}/index.js](#36-new_repo_nameindexjs)
+  - [3.7. \${NEW_REPO_NAME}/lib](#37-new_repo_namelib)
+  - [3.8. \${NEW_REPO_NAME}/lib/index.d.ts](#38-new_repo_namelibindexdts)
+  - [3.9. \${NEW_REPO_NAME}/lib/index.js](#39-new_repo_namelibindexjs)
+  - [3.10. \${NEW_REPO_NAME}/lib/\${NEW_REPO_NAME}.d.ts](#310-new_repo_namelibnew_repo_namedts)
+  - [3.11. \${NEW_REPO_NAME}/lib/\${NEW_REPO_NAME}.js](#311-new_repo_namelibnew_repo_namejs)
+  - [3.12. \${NEW_REPO_NAME}/src/index.ts](#312-new_repo_namesrcindexts)
+  - [3.13. \${NEW_REPO_NAME}/src/\${NEW_REPO_NAME}.ts](#313-new_repo_namesrcnew_repo_namets)
+  - [3.14. \${NEW_REPO_NAME}/tests/index.js](#314-new_repo_nametestsindexjs)
+  - [3.15. \${NEW_REPO_NAME}/tests/\${NEW_REPO_NAME}.spec.ts](#315-new_repo_nametestsnew_repo_namespects)
 - [4. Launch configurations](#4-launch-configurations)
 - [5. NPM Scripts](#5-npm-scripts)
 
@@ -41,7 +41,7 @@ Version | Description
  1.0.0 | *Under construction, not ready for use*
  0.0.1 | *Initial development version, do not use*
 
-## 3. Files and folders
+## 3. The folders and files of \${NEW_REPO_NAME}
 
 ```lang
 \${NEW_REPO_NAME}
@@ -81,63 +81,63 @@ Version | Description
 └── tsconfig.json
 ```
 
-### \${NEW_REPO_NAME}/assembly/index.ts
+### 3.1. \${NEW_REPO_NAME}/assembly/index.ts
 
 Internal AssemblyScript library core implementation.
 
-### \${NEW_REPO_NAME}/build/optimized.d.ts
+### 3.2. \${NEW_REPO_NAME}/build/optimized.d.ts
 
 Generated type definition for binary output.
 
-### \${NEW_REPO_NAME}/build/optimized.wasm
+### 3.3. \${NEW_REPO_NAME}/build/optimized.wasm
 
 Generated optimized compile binary output.
 
-### \${NEW_REPO_NAME}/build/optimized.wat
+### 3.4. \${NEW_REPO_NAME}/build/optimized.wat
 
 Generated optimized AssemblyScript text output.
 
-### \${NEW_REPO_NAME}/index.d.ts
+### 3.5. \${NEW_REPO_NAME}/index.d.ts
 
 Type definition for package index module.
 
-### \${NEW_REPO_NAME}/index.js
+### 3.6. \${NEW_REPO_NAME}/index.js
 
 Package index module.
 
-### \${NEW_REPO_NAME}/lib  
+### 3.7. \${NEW_REPO_NAME}/lib  
 
 Generated TypeScript output.
 
-### \${NEW_REPO_NAME}/lib/index.d.ts  
+### 3.8. \${NEW_REPO_NAME}/lib/index.d.ts  
 
 Generated type definition for the js index module.
 
-### \${NEW_REPO_NAME}/lib/index.js  
+### 3.9. \${NEW_REPO_NAME}/lib/index.js  
 
 Generated JavaScript index module.
 
-### \${NEW_REPO_NAME}/lib/\${NEW_REPO_NAME}.d.ts  
+### 3.10. \${NEW_REPO_NAME}/lib/\${NEW_REPO_NAME}.d.ts  
 
 Generated Type definition for js api module.
 
-### \${NEW_REPO_NAME}/lib/\${NEW_REPO_NAME}.js  
+### 3.11. \${NEW_REPO_NAME}/lib/\${NEW_REPO_NAME}.js  
 
 Generated JavaScript api implementation module.
 
-### \${NEW_REPO_NAME}/src/index.ts
+### 3.12. \${NEW_REPO_NAME}/src/index.ts
 
 TypeScript api index module.
 
-### \${NEW_REPO_NAME}/src/\${NEW_REPO_NAME}.ts  
+### 3.13. \${NEW_REPO_NAME}/src/\${NEW_REPO_NAME}.ts  
 
 TypeScript api implementation module.
 
-### \${NEW_REPO_NAME}/tests/index.js  
+### 3.14. \${NEW_REPO_NAME}/tests/index.js  
 
 Barebones JavaScript api module tests.
 
-### \${NEW_REPO_NAME}/tests/\${NEW_REPO_NAME}.spec.ts  
+### 3.15. \${NEW_REPO_NAME}/tests/\${NEW_REPO_NAME}.spec.ts  
 
 Jest TypeScript api module tests.
 
