@@ -232,20 +232,18 @@ jq '.type = "commonjs"' package.json > .tmp && mv .tmp package.json
 jq '.main = "index.js"' package.json > .tmp && mv .tmp package.json
 # Fetch a copy of the package template and create a README.md 
 cp ~/bin/create-script-lib.template.md ./README.md
-# Replace the macro strings in ./README.md. Twice because sed only replace one occurance / line ?
 NEW_REPO_NAME_MACRO='\\${NEW_REPO_NAME}'
 sed -i "s/${NEW_REPO_NAME_MACRO}/${NEW_REPO_NAME}/g" ./README.md
-#sed -i "s/${NEW_REPO_NAME_MACRO}/${NEW_REPO_NAME}/" ./README.md
 PKG_README_DESCRIPTION_MACRO='\\${PKG_README_DESCRIPTION}'
-sed -i "s/${PKG_README_DESCRIPTION_MACRO}/${PKG_README_DESCRIPTION}/" ./README.md
+sed -i "s/${PKG_README_DESCRIPTION_MACRO}/${PKG_README_DESCRIPTION}/g" ./README.md
 GH_USER_MACRO='\\${GH_USER}'
-sed -i "s/${GH_USER_MACRO}/${GH_USER}/" ./README.md
+sed -i "s/${GH_USER_MACRO}/${GH_USER}/g" ./README.md
 GH_AUTHOR_MACRO='\\${GH_AUTHOR}'
-sed -i "s/${GH_AUTHOR_MACRO}/${GH_AUTHOR}/" ./README.md
+sed -i "s/${GH_AUTHOR_MACRO}/${GH_AUTHOR}/g" ./README.md
 GH_EMAIL_MACRO='\\${GH_EMAIL}'
-sed -i "s/${GH_EMAIL_MACRO}/${GH_EMAIL}/" ./README.md
+sed -i "s/${GH_EMAIL_MACRO}/${GH_EMAIL}/g" ./README.md
 NPM_ORG_MACRO='\\${NPM_ORG}'
-sed -i "s/${NPM_ORG_MACRO}/${NPM_ORG}/" ./README.md
+sed -i "s/${NPM_ORG_MACRO}/${NPM_ORG}/g" ./README.md
 # GitHub repos Create API call
 echo "Creating repo"
 curl -H "Authorization: token $GH_API_TOKEN" https://api.github.com/user/repos -d '{"name": "'"${NEW_REPO_NAME}"'", "description": "'"${PKG_GIT_DESCRIPTION}"'"}'

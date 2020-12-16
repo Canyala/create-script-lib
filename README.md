@@ -16,6 +16,9 @@
   - [4.1. Create a local repo](#41-create-a-local-repo)
   - [4.2. Make the tool available](#42-make-the-tool-available)
 - [5. Using the scaffolding tool](#5-using-the-scaffolding-tool)
+- [6. Developing the package](#6-developing-the-package)
+- [7. Transfer ownership to an organisation](#7-transfer-ownership-to-an-organisation)
+- [8. Publishing the package](#8-publishing-the-package)
 
 ## 1. Abstract
 
@@ -246,3 +249,19 @@ $create-script-lib
 ```
 
 The tool use the folder name when writing configuration info etc and it also checks if the folder is empty. If not empty, the tool fails gracefully without changing or touching anything.  
+
+## 6. Developing the package
+
+The only actual implementation that the `create-script-lib` provides is an `add(a, b)` function together with tests for that function.
+
+The rest of the implementation is up to you.
+
+## 7. Transfer ownership to an organisation
+
+By using the tool, you get a local repo and you also get a remote repo under your personal git account. If you need the repo to instead be owned by an organisation, you can change it by navigating to the package `settings` and further on to `transfer ownership` on github.
+
+## 8. Publishing the package
+
+Packages can be published to either or both of github and/or npm. The [npm](https://www.npmjs.com/) organisation is owned by github, which in turn is owned by microsoft, so it really doesn't matter where you publish to.
+
+You could also publish to a private file share on your internal network. `npm install /path/to/package` works. This can be useful for early test scenarios.
