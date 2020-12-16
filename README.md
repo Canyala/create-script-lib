@@ -1,4 +1,4 @@
-# create-script-lib v0.0.1<!-- omit in toc -->
+# create-script-lib@1.0.0<!-- omit in toc -->
 
 ## Table of contents<!-- omit in toc -->
 
@@ -38,10 +38,10 @@ There are repositories for both [TypeScript](https://github.com/microsoft/TypeSc
 
 ### 1.2. Releases
 
-Version | Description
----------|----------
- 1.0.0 | *Under construction, not ready for use*
- 0.0.1 | *Initial development version, do not use*
+Version | Description | Known issues
+---------|----------|-----------
+ 1.0.0 | *Feature complete and usable* | Stepping into wasm not yet working.
+ 0.0.1 | *Initial development version, do not use* | N/A
 
 ## 2. Included Files
 
