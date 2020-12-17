@@ -40,7 +40,7 @@ There are repositories for both [TypeScript](https://github.com/microsoft/TypeSc
 
 Version | Description | Known issues
 ---------|----------|-----------
- 1.0.0 | *Feature complete and usable* | Stepping into wasm not yet working.
+ 1.0.1 | *Feature complete and usable* | Stepping into wasm not yet working.
  0.0.1 | *Initial development version, do not use* | N/A
 
 ## 2. Included Files
