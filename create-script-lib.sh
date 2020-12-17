@@ -57,7 +57,7 @@ rm -f index.js
 # Generate an initial ts api wrapper file
 {
     echo 'import * as fs from "fs";'
-    echo 'import * as loader from "@assemblyscript/loader/umd"; // /umd since jest likes it better...' 
+    echo 'import * as loader from "@assemblyscript/loader";' 
     echo 'import ASModule from "../build/untouched";'
     echo 'const imports = { /* imports go here */ };'
     echo 'const wasmModulePath = __dirname.replace("/lib","/build/untouched.wasm");'
